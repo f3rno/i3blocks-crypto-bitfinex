@@ -22,12 +22,13 @@ const run = async () => {
   const quote = symbol.substring(4)
   const ticker = await rest.ticker(symbol)
   const { lastPrice, dailyChangePerc } = ticker
-  let str = `${base} ${+preparePrice(lastPrice)}`
+  let str = base
 
   if (CCY_ICONS[quote]) {
     str += ` ${CCY_ICONS[quote]}`
   }
 
+  str += `${+preparePrice(lastPrice)}`
   str += ` ${(dailyChangePerc * 100).toFixed(2)}%`
 
   console.log(str)
