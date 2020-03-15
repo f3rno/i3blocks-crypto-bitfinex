@@ -28,7 +28,7 @@ const run = async () => {
     str += ` ${CCY_ICONS[quote]}`
   }
 
-  str += `${+preparePrice(lastPrice)}`
+  str += `${(+preparePrice(lastPrice)).toLocaleString()}`
   str += ` ${(dailyChangePerc * 100).toFixed(2)}%`
 
   console.log(str)
