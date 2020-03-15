@@ -3,6 +3,7 @@
 
 const { symbol: BLOCK_SYMBOL } = process.env
 const { RESTv2 } = require('bfx-api-node-rest')
+const { preparePrice } = require('bfx-api-node-util')
 
 const CCY_ICONS = {
   USD: '$',
@@ -21,7 +22,7 @@ const run = async () => {
   const quote = symbol.substring(4)
   const ticker = await rest.ticker(symbol)
   const { lastPrice, dailyChangePerc } = ticker
-  let str = `${base} ${lastPrice}`
+  let str = `${base} ${+preparePrice(lastPrice)}`
 
   if (CCY_ICONS[quote]) {
     str += ` ${CCY_ICONS[quote]}`
