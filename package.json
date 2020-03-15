@@ -1,0 +1,24 @@
+{
+  "name": "i3blocks-crypto-bitfinex",
+  "version": "1.0.0",
+  "description": "Bitfinex Market Prices Indicator for i3",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f3rno/i3blocks-crypto-bitfinex.git"
+  },
+  "keywords": [
+    "i3",
+    "i3blocks",
+    "crypto"
+  ],
+  "author": "Cris Mihalache",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/f3rno/i3blocks-crypto-bitfinex/issues"
+  },
+  "homepage": "https://github.com/f3rno/i3blocks-crypto-bitfinex#readme",
+  "dependencies": {
+    "bfx-api-node-rest": "^3.0.4"
+  }
+}
